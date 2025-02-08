@@ -39,14 +39,14 @@ export function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Get Started">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/login">Login</HoveredLink>
-            <HoveredLink href="/signup">Signup</HoveredLink>
+            <HoveredLink href="/account/signin">Signin</HoveredLink>
+            <HoveredLink href="/account/signup">Signup</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Contact Us">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/contact/mail">Mail us</HoveredLink>
-            <HoveredLink href="/contact/call">Call us</HoveredLink>
+            <HoveredLink href="/contact/#mail">Mail us</HoveredLink>
+            <HoveredLink href="/contact/#call">Call us</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Explore">

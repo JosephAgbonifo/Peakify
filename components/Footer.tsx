@@ -71,7 +71,7 @@ const Footer = () => {
             Explore
           </h2>
           <div className="">
-            <a href="/" className="p-3 pl-5 block">
+            <a href="/account/signin" className="p-3 pl-5 block">
               <FaSignInAlt className="inline mr-2 text-green-300" />
               Signin
             </a>

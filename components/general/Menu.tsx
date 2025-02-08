@@ -1,35 +1,47 @@
 "use client";
 import React, { useState } from "react";
-import { FiMenu } from "react-icons/fi";
-import { FiSearch } from "react-icons/fi";
+import { FiMenu, FiX, FiSearch } from "react-icons/fi";
+import Menuitem from "./Menuitem";
 
 const Menu = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [menuToggle, setMenuToggle] = useState("off");
   const handleSearch = (event: any) => {
     event.preventDefault();
   };
+  const togglemenu = () => {
+    if (menuToggle === "on") {
+      setMenuToggle("off");
+    } else {
+      setMenuToggle("on");
+    }
+  };
   return (
     <>
-      <div className="flex-1 lg:hidden text-end text-4xl">
-        <FiMenu className="inline" />
-      </div>
+      {menuToggle === "off" ? (
+        <div className="flex-1 lg:hidden transition-all duration-300 text-end text-4xl">
+          <FiMenu onClick={togglemenu} className="inline" />
+        </div>
+      ) : (
+        ""
+      )}
       <div className="hidden lg:inline lg:flex-1 text-end">
         <a href="/">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Home
           </button>
         </a>
-        <a href="/">
+        <a href="/Contact">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Contact
           </button>
         </a>
-        <a href="/">
+        <a href="/account/profile">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Profile
           </button>
         </a>
-        <a href="/">
+        <a href="/account/dashboard">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Dashboard
           </button>
@@ -53,6 +65,28 @@ const Menu = () => {
           </button>
         </form>
       </div>
+
+      {menuToggle === "on" ? (
+        <div
+          id="menu-container"
+          className="transition-all duration-300 fixed top-10 h-[40vh] -ml-5 w-[80vw] right-[10vw] rounded p-0  z-50 bg-green-100 lg:hidden"
+        >
+          <div id="menu-content" className="m-10">
+            <div
+              onClick={togglemenu}
+              className="rounded-full bg-green inline-block p-1 text-green-100 text-3xl float-end -mt-5 -mr-5"
+            >
+              <FiX />
+            </div>
+            <Menuitem link="/account/signup" content="Signup" />
+            <Menuitem link="/account/signup" content="Signin" />
+            <Menuitem link="/contact" content="Contact Us" />
+            <Menuitem link="/about" content="About" />
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };
