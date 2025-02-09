@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import { FiMenu, FiX, FiSearch } from "react-icons/fi";
 import Menuitem from "./Menuitem";
+import Link from "next/link";
 
 const Menu = () => {
   const [searchValue, setSearchValue] = useState("");
   const [menuToggle, setMenuToggle] = useState("off");
-  const handleSearch = (event: any) => {
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
   const togglemenu = () => {
@@ -26,26 +27,26 @@ const Menu = () => {
         ""
       )}
       <div className="hidden lg:inline lg:flex-1 text-end">
-        <a href="/">
+        <Link href="/">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Home
           </button>
-        </a>
-        <a href="/Contact">
+        </Link>
+        <Link href="/Contact">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Contact
           </button>
-        </a>
-        <a href="/account/profile">
+        </Link>
+        <Link href="/account/profile">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Profile
           </button>
-        </a>
-        <a href="/account/dashboard">
+        </Link>
+        <Link href="/account/dashboard">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
             Dashboard
           </button>
-        </a>
+        </Link>
         <form
           onSubmit={handleSearch}
           className="inline-flex items-center p-1 bg-green-400 text-green rounded-full "

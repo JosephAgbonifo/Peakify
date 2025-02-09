@@ -11,7 +11,7 @@ const NotFound = () => {
           OOPs :&#x29;
         </h1>
         <p className="p-10 mt-10 text-center text-2xl">
-          We Couldn't Find The Resource You Were Looking For
+          We Couldn&rsquo;t Find The Resource You Were Looking For
         </p>
       </div>
       <Footer />

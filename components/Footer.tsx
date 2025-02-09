@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   FaWhatsappSquare,
   FaTwitterSquare,
@@ -31,18 +32,18 @@ const Footer = () => {
             Connect With Us
           </h2>
           <div className="flex">
-            <a href="/" className="block p-3 text-3xl text-green-300">
+            <Link href="/" className="block p-3 text-3xl text-green-300">
               <FaWhatsappSquare className="inline" />
-            </a>
-            <a href="/" className="block p-3 text-3xl text-green-300">
+            </Link>
+            <Link href="/" className="block p-3 text-3xl text-green-300">
               <FaTwitterSquare />
-            </a>
-            <a href="/" className="block p-3 text-3xl text-green-300">
+            </Link>
+            <Link href="/" className="block p-3 text-3xl text-green-300">
               <FaLinkedin className="inline" />
-            </a>
-            <a href="/" className="block p-3 text-3xl text-green-300">
+            </Link>
+            <Link href="/" className="block p-3 text-3xl text-green-300">
               <FaFacebookSquare />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="lg:border-r-2 border-orange-100 w-full p-5">
@@ -71,18 +72,18 @@ const Footer = () => {
             Explore
           </h2>
           <div className="">
-            <a href="/account/signin" className="p-3 pl-5 block">
+            <Link href="/account/signin" className="p-3 pl-5 block">
               <FaSignInAlt className="inline mr-2 text-green-300" />
               Signin
-            </a>
-            <a href="/account/signup" className="p-3 pl-5 block">
+            </Link>
+            <Link href="/account/signup" className="p-3 pl-5 block">
               <FaRegUser className="inline mr-2 text-green-300" />
               Signup
-            </a>
-            <a href="/" className="p-3 pl-5 block">
+            </Link>
+            <Link href="/" className="p-3 pl-5 block">
               <FaSearch className="inline mr-2 text-green-300" />
               Discover
-            </a>
+            </Link>
           </div>
         </div>
       </div>

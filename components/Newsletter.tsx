@@ -4,7 +4,7 @@ import React from "react";
 
 const Newsletter = () => {
   const [mail, setMail] = useState("");
-  const handlesubmit = (event: any) => {
+  const handlesubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
   return (
