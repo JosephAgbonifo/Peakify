@@ -24,7 +24,10 @@ const Profilebar = () => {
         </p>
       </div>
       <div>
-        <Link href="/settings" className="rounded-2xl bg-gray-200 p-4 px-10">
+        <Link
+          href="/settings"
+          className="rounded-2xl bg-gray-200 p-4 px-10 hover:bg-gray-300"
+        >
           Edit Profile
         </Link>
       </div>

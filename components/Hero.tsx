@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "./ui/background-beams";
-import { Shimmer } from "./Button";
-import Link from "next/link";
+import ipad from "../public/ipad.png";
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="h-[100vh] w-full bg-gradient-to-br from-green-400 to-green-100 rounded-md relative flex flex-col items-center justify-center antialiased">
@@ -21,11 +21,16 @@ export default function Home() {
           Discover, learn, and thrive with our curated resources designed to
           help you achieve your dreams.
         </p>
-        <Link href="/about" className="border bg-red p-10">
-          w0w
-          <Shimmer value="Want To Know More?" />
-        </Link>
       </div>
+      <Image
+        src={ipad}
+        alt="mockup"
+        width="800"
+        height="800"
+        className="absolute lg:top-96 sm:top-[270px] sm:-left-96 lg:left-[calc(50%-400px)]"
+        priority
+        unoptimized={true}
+      />
     </div>
   );
 }

@@ -46,13 +46,13 @@ export const BentoGridItem = ({
           <img
             src={img}
             alt="network"
-            className="sm:absolute sm:right-3 lg:relative  w-56 md:w-[10vw] -mt-10 -mr-10"
+            className="sm:absolute sm:right-20 lg:relative  w-56 md:w-[10vw] -mt-10 -mr-10"
           />
         ) : (
           <img
             src={img}
             alt="network"
-            className="sm:absolute sm:right-3 lg:relative  w-56 md:w-[20vw] -mt-10 -mr-10"
+            className="sm:absolute sm:right-20 lg:relative  w-56 md:w-[20vw] -mt-10 -mr-10"
           />
         )
       ) : (

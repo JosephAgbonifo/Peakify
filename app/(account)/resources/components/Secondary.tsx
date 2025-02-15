@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Resources from "./Resources";
-import Forum from "./Forum";
 import Upload from "./Upload";
 
 function Secondary() {
@@ -13,27 +12,16 @@ function Secondary() {
         onClick={() => setDisp("resources")}
         className="hover:bg-gray-200 p-10 rounded-t-2xl m-2 transition-all duration-300"
       >
-        My Resources
+        Downloaded Resources
       </button>
       <button
-        onClick={() => setDisp("forum")}
+        onClick={() => setDisp("uploads")}
         className="hover:bg-gray-200 p-10 rounded-t-2xl m-2 transition-all duration-300"
       >
-        My Forums
+        Uploaded resources
       </button>
-      <button
-        onClick={() => setDisp("upload")}
-        className="hover:bg-gray-200 p-10 rounded-t-2xl m-2 transition-all duration-300"
-      >
-        Uploaded Resources
-      </button>
-      {disp === "resources" ? (
-        <Resources />
-      ) : disp === "forum" ? (
-        <Forum />
-      ) : (
-        <Upload />
-      )}
+
+      {disp === "resources" ? <Resources /> : <Upload />}
     </>
   );
 }

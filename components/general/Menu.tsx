@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { FiMenu, FiX, FiSearch } from "react-icons/fi";
 import Menuitem from "./Menuitem";
 import Link from "next/link";
+import { BiSolidDashboard } from "react-icons/bi";
+import { FaBell } from "react-icons/fa";
 
 const Menu = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -39,12 +41,13 @@ const Menu = () => {
         </Link>
         <Link href="/profile">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
-            Profile
+            <FaBell className="inline-block" />
+            <div className="inline-block w-2 h-2 bg-red-800 rounded-full absolute"></div>
           </button>
         </Link>
         <Link href="/dashboard">
           <button className="p-3 rounded transition-all duration-300 mr-2 hover:bg-white-100/15">
-            Dashboard
+            <BiSolidDashboard className="inline-block" />
           </button>
         </Link>
         <form
