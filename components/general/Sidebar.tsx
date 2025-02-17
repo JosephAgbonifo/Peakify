@@ -1,4 +1,5 @@
-import { items } from "@/data/sidebar";
+"use client";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { BiSolidFilePdf, BiGroup, BiSolidDashboard } from "react-icons/bi";
 import { FaUserGear } from "react-icons/fa6";
@@ -12,6 +13,7 @@ function ItemList({
   Icon?: React.ComponentType;
   id: string;
 }) {
+  const pathname = usePathname();
   return (
     <Link
       href={`/${id}`}

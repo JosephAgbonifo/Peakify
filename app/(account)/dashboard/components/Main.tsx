@@ -4,7 +4,7 @@ import Secondary from "./Secondary";
 
 const Main = () => {
   return (
-    <div className="lg:w-[80%] lg:p-10 overflow-x-hidden overflow-y-scroll no-scrollbar">
+    <div className="lg:w-[80%] lg:p-10 h-[100vh] overflow-x-hidden overflow-y-scroll no-scrollbar">
       <Alerts />
       <h1 className="text-4xl py-5 font-montserrat">My Dashboard</h1>
       <Profilebar />

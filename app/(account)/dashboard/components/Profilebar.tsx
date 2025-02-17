@@ -26,7 +26,7 @@ const Profilebar = () => {
       <div>
         <Link
           href="/settings"
-          className="rounded-2xl bg-gray-200 p-4 px-10 hover:bg-gray-300"
+          className="hidden lg:block lg:rounded-2xl lg:bg-gray-200 lg:p-4 lg:px-10 hover:bg-gray-300"
         >
           Edit Profile
         </Link>
