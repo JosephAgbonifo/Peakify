@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Peakify Frontend
+
+This is the frontend of **Peakify**, an educational platform built with Next.js.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-```bash
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/peakify-frontend.git
+   cd peakify-frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+### Running the Development Server
+To start the development server, run:
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+By default, the project will be available at [http://localhost:3000](http://localhost:3000).
+
+## Project Structure
+```
+peakify-frontend/
+│-- public/        # Static assets
+│-- app/
+|   |--(account)/
+|   |   |--dashbord/
+|   |   |--forums/
+|   |   |--resources/
+|   |   |--settings/
+|   |   |--signin/
+|   |   |--signup/
+|   |--contact/
+|   |--globals.css
+|   |--layout.tsx
+|   |--notfound.tsx
+|   |--page.tsx
+│   │-- pages/       # Next.js pages
+│   │-- styles/      # Global styles
+│   │-- utils/       # Utility functions
+|--components # Reusable components
+|--data
+|--lib
+│-- .gitignore      # Git ignore file
+│-- package.json    # Project dependencies & scripts
+│-- README.md       # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
+- **Next.js** - React framework for SSR & static site generation
+- **Tailwind CSS** - Utility-first CSS framework
+- **ESLint & Prettier** - Code linting & formatting
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m "Add feature-name"`.
+4. Push to the branch: `git push origin feature-name`.
+5. Open a pull request.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
+This project is licensed under the **MIT License**.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+For any inquiries, reach out to [joesefair@gmail.com](mailto:joesefair@gmail.com).
